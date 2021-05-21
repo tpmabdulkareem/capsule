@@ -4,19 +4,36 @@
  */
 
 export type RootStackParamList = {
+  Auth: undefined;
   Root: undefined;
   NotFound: undefined;
+  Splash: undefined;
 };
 
 export type BottomTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Home: undefined;
+  Follower: undefined;
+  AddVideo: undefined;
+  Notification: undefined;
+  Profile: undefined;
 };
 
-export type TabOneParamList = {
-  TabOneScreen: undefined;
+export type HomeParamList = {
+  HomeScreen: undefined;
 };
 
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+export type FollowerParamList = {
+  FollowerScreen: undefined;
+};
+
+export type AddVideoParamList = {
+  AddVideoScreen: undefined;
+};
+
+export type NotificationParamList = {
+  NotificationScreen: undefined;
+};
+
+export type ProfileParamList = {
+  ProfileScreen: undefined;
 };

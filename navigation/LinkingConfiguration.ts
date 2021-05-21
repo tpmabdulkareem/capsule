@@ -10,16 +10,33 @@ export default {
   prefixes: [Linking.makeUrl('/')],
   config: {
     screens: {
+      Splash:'/',
+      Auth:'/login',
       Root: {
         screens: {
-          TabOne: {
+          Home: {
             screens: {
-              TabOneScreen: 'one',
+              HomeScreen: 'home',
             },
           },
-          TabTwo: {
+          Follower: {
             screens: {
-              TabTwoScreen: 'two',
+              FollowerScreen: 'network',
+            },
+          },
+          AddVideo: {
+            screens: {
+              AddVideoScreen: 'add-video',
+            },
+          },
+          Notification: {
+            screens: {
+              NotificationScreen: 'notification',
+            },
+          },
+          Profile: {
+            screens: {
+              ProfileScreen: 'profile',
             },
           },
         },
