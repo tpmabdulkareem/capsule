@@ -1,3 +1,4 @@
+import { FontAwesome } from '@expo/vector-icons';
 import { Video } from 'expo-av';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
@@ -23,7 +24,9 @@ const LoginScreen = (props: Props) => {
       <StatusBar hidden />
       <Video
         style={styles.video}
-        source={videos?.loginBg}
+        source={{
+          uri: 'https://player.vimeo.com/external/505233451.sd.mp4?s=7c7fa34f3b9478a580fbf31853d53a6ba48f1f37&profile_id=165&oauth2_token_id=57447761',
+        }}
         shouldPlay
         resizeMode="contain"
         isLooping
@@ -36,11 +39,13 @@ const LoginScreen = (props: Props) => {
       <Pressable
         style={styles.fbBtn}
         onPress={() => navigation.navigate('Root')}>
+        <FontAwesome name="facebook" size={20} color="#FFF" />
         <Text style={styles.fbText}>Sign in with Facebook</Text>
       </Pressable>
       <Pressable
         style={styles.socialBtn}
         onPress={() => navigation.navigate('Root')}>
+        <Image source={images.kokoatalk} style={styles.kokologo} />
         <Text style={styles.socialText}>Sign in with KakaoTalk</Text>
       </Pressable>
     </View>

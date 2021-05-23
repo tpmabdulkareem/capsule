@@ -13,7 +13,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.tsx', '.ios.js', '.android.js'],
+        extensions: ['.js', '.tsx', '.ios.js', '.android.js', 'never'],
       },
     },
     react: {

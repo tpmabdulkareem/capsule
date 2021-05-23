@@ -1,6 +1,8 @@
+/* eslint-disable global-require */
 const images = {
-  // eslint-disable-next-line global-require
   logo: require('./icon.png'),
+  kokoatalk: require('./kokoatalk.png'),
+  homeBanner: require('./homebanner.jpg'),
 };
 
 export default images;

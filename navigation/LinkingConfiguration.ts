@@ -10,23 +10,26 @@ export default {
   prefixes: [Linking.makeUrl('/')],
   config: {
     screens: {
-      Splash:'/',
-      Auth:'/login',
+      Splash: '/',
+      Auth: '/login',
       Root: {
         screens: {
           Home: {
             screens: {
               HomeScreen: 'home',
+              PlayVideo: 'play-video',
             },
           },
           Follower: {
             screens: {
               FollowerScreen: 'network',
+              PlayVideo: 'play-video',
             },
           },
           AddVideo: {
             screens: {
               AddVideoScreen: 'add-video',
+              PlayVideo: 'play-video',
             },
           },
           Notification: {
@@ -37,6 +40,7 @@ export default {
           Profile: {
             screens: {
               ProfileScreen: 'profile',
+              PlayVideo: 'play-video',
             },
           },
         },

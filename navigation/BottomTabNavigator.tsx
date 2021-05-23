@@ -4,12 +4,8 @@
  */
 import { MaterialIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {
-  createStackNavigator,
-  StackHeaderLeftButtonProps,
-} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
-import { View } from '../components/Themed';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -17,6 +13,7 @@ import AddVideoScreen from '../screens/AddVideoScreen';
 import FollowersScreen from '../screens/FollowersScreen';
 import HomeScreen from '../screens/HomeScreen';
 import NotificationScreen from '../screens/NotificationScreen';
+import PlayVideoScreen from '../screens/PlayVideoScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import {
   AddVideoParamList,
@@ -42,7 +39,20 @@ const HomeTabStack = createStackNavigator<HomeParamList>();
 function HomeTabNavigator() {
   return (
     <HomeTabStack.Navigator>
-      <HomeTabStack.Screen name="HomeScreen" component={HomeScreen} />
+      <HomeTabStack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+      <HomeTabStack.Screen
+        name="PlayVideo"
+        component={PlayVideoScreen}
+        options={{
+          headerTitleAlign: 'center',
+          headerTitle: '',
+          headerTransparent: true,
+        }}
+      />
     </HomeTabStack.Navigator>
   );
 }
@@ -56,7 +66,16 @@ function FollowerTabNavigator() {
       <FollowerTabStack.Screen
         name="FollowerScreen"
         component={FollowersScreen}
-        options={{ headerTitle: 'Follower' }}
+        options={{ headerShown: false }}
+      />
+      <FollowerTabStack.Screen
+        name="PlayVideo"
+        component={PlayVideoScreen}
+        options={{
+          headerTitleAlign: 'center',
+          headerTitle: '',
+          headerTransparent: true,
+        }}
       />
     </FollowerTabStack.Navigator>
   );
@@ -71,7 +90,9 @@ function NotificationTabNavigator() {
       <NotificationTabStack.Screen
         name="NotificationScreen"
         component={NotificationScreen}
-        options={{ headerTitle: 'Notification' }}
+        options={{
+          headerShown: false,
+        }}
       />
     </NotificationTabStack.Navigator>
   );
@@ -86,7 +107,18 @@ function AddVideoTabNavigator() {
       <AddVideoTabStack.Screen
         name="AddVideoScreen"
         component={AddVideoScreen}
-        options={{ headerTitle: 'AddVideo' }}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <AddVideoTabStack.Screen
+        name="PlayVideo"
+        component={PlayVideoScreen}
+        options={{
+          headerTitleAlign: 'center',
+          headerTitle: '',
+          headerTransparent: true,
+        }}
       />
     </AddVideoTabStack.Navigator>
   );
@@ -101,7 +133,18 @@ function ProfileTabNavigator() {
       <ProfileTabStack.Screen
         name="ProfileScreen"
         component={ProfileScreen}
-        options={{ headerTitle: 'Profile' }}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <ProfileTabStack.Screen
+        name="PlayVideo"
+        component={PlayVideoScreen}
+        options={{
+          headerTitleAlign: 'center',
+          headerTitle: '',
+          headerTransparent: true,
+        }}
       />
     </ProfileTabStack.Navigator>
   );

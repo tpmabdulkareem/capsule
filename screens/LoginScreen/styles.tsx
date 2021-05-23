@@ -6,13 +6,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#ecf0f1',
     alignItems: 'center',
+    width: '100%',
   },
   video: {
     position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
     height: '100%',
     width: '100%',
   },
@@ -33,16 +30,18 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   fbBtn: {
-    padding: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 18,
     borderRadius: 20,
     backgroundColor: '#3B5797',
     marginTop: 15,
     flexDirection: 'row',
+    alignItems: 'center',
   },
   fbText: {
     color: '#FFF',
-    fontSize: 15,
-    paddingHorizontal: 10,
+    fontSize: 16,
+    paddingHorizontal: 13,
     fontWeight: '600',
   },
   socialBtn: {
@@ -50,12 +49,19 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: 'yellow',
     marginTop: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   socialText: {
     color: '#000',
     fontSize: 16,
     paddingHorizontal: 10,
     fontWeight: '600',
+  },
+  kokologo: {
+    height: 20,
+    width: 20,
+    resizeMode: 'contain',
   },
 });
 

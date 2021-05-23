@@ -20,14 +20,17 @@ export type BottomTabParamList = {
 
 export type HomeParamList = {
   HomeScreen: undefined;
+  PlayVideo: undefined;
 };
 
 export type FollowerParamList = {
   FollowerScreen: undefined;
+  PlayVideo: undefined;
 };
 
 export type AddVideoParamList = {
   AddVideoScreen: undefined;
+  PlayVideo: undefined;
 };
 
 export type NotificationParamList = {
@@ -36,4 +39,5 @@ export type NotificationParamList = {
 
 export type ProfileParamList = {
   ProfileScreen: undefined;
+  PlayVideo: undefined;
 };
